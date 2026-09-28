@@ -1,0 +1,4 @@
+interface:
+  display_name: "TikTok Script Writer (EN→中文)"
+  short_description: "TikTok scripts in English + Chinese translation"
+  default_prompt: "Use $tiktok-script-writer to write a TikTok script in English for the US market, then provide the full Chinese translation below."
