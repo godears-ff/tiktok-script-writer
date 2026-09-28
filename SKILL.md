@@ -73,10 +73,11 @@ language rather than padding to hit a number.
 
 Infer the niche and angle from the request. Ask only when the missing choice
 would materially change the script. If the user wants candidate ideas, read
-`references/tiktok-formats.md`; when local script execution is useful, run:
+`references/tiktok-formats.md`; when local script execution is useful, resolve
+the absolute path to this skill's root directory and run:
 
 ```bash
-python scripts/generate-ideas.py <niche>
+python /absolute/path/to/tiktok-script-writer/scripts/generate-ideas.py <niche>
 ```
 
 Treat generated ideas as seeds. Verify any trend, statistic, or current-event
@@ -209,6 +210,16 @@ Use this order for a full deliverable:
 ## CTA
 [English call to action]
 
+## Alternative Angles (commentary only)
+[2-3 distinct angles and how each differs from typical videos on the topic]
+
+## Rights and Platform Notes (commentary only)
+[Source excerpts / audio / copyright and platform risk / AI disclosure]
+
+## Pre-Publish Checklist (commentary only)
+[Short clips / rights and platform policy / rewritten text / opinion strength /
+bilingual claim consistency / AI disclosure]
+
 ## Fact and Risk Notes (social-news only)
 [As of / confirmed facts / alleged claims / disputed claims / unknowns /
 legal-stage check / sensitive-content check / source gaps]
@@ -224,8 +235,9 @@ date, and the facts it supports]
 
 ## Chinese Translation
 [Complete translation of every English section above, including Fact and Risk
-Notes, Sources, and Cover Prompt when present. Preserve factual, legal, and
-source qualifiers exactly.]
+Notes, Sources, commentary alternative angles, rights notes, pre-publish
+checklist, and Cover Prompt when present. Preserve factual, legal, and source
+qualifiers exactly.]
 ```
 
 For a compact general or commentary request, use:

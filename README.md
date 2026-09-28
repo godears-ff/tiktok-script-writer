@@ -1,5 +1,7 @@
 # TikTok Script Writer
 
+![Validate Skill](https://github.com/godears-ff/tiktok-script-writer/actions/workflows/validate.yml/badge.svg)
+
 An agent skill for writing US-audience TikTok and short-form video scripts in
 English with a complete Chinese translation.
 
@@ -70,18 +72,36 @@ You can also ask naturally for a TikTok script, English short-form copy,
 
 ```text
 tiktok-script-writer/
+|-- .github/
+|   `-- workflows/
+|       `-- validate.yml
 |-- SKILL.md
 |-- agents/
 |   `-- openai.yaml
 |-- assets/
 |-- references/
-`-- scripts/
+|-- scripts/
+|   |-- generate-ideas.py
+|   `-- validate_skill.py
+|-- LICENSE
+`-- README.md
 ```
 
 ## Versioning
 
-Releases use Git tags and GitHub Releases. The current initial release is
-`v1.0.0`.
+Releases use Git tags and GitHub Releases. See the
+[Releases](https://github.com/godears-ff/tiktok-script-writer/releases) page for
+the latest version.
+
+## Validation
+
+Run the repository validation script:
+
+```text
+python scripts/validate_skill.py
+```
+
+GitHub Actions runs the same validation on pushes to `main` and pull requests.
 
 ## License
 

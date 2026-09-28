@@ -70,7 +70,7 @@ use 15-30 seconds. Other supported durations are 45, 60, and 90 seconds.
 
 要求：
 1. 前 3 秒直接抛结论或冲突，不许铺垫。
-2. 总字数控制在 80~130 字。
+2. 总字数控制在 80~130 个汉字。
 3. 只用一句讲背景，重点讲观点。
 4. 结尾必须是互动句，引导评论或收藏。
 5. 保持口语化，保留一个只有我会说的细节。
@@ -115,7 +115,7 @@ Use the same info and write a 20-second Shorts commentary.
 
 Requirements:
 1. Open with the opinion or conflict in the first 3 seconds. No setup.
-2. Keep it around 80-130 words.
+2. Keep it around 45-60 words.
 3. One sentence of context, then straight to your take.
 4. End with an interaction question that makes people comment or save.
 5. Keep it conversational and include one detail only you would notice.

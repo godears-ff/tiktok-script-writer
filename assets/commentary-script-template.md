@@ -9,7 +9,6 @@
 - **Target Audience**: [e.g. horror fans who saw the film]
 - **My Take**: [specific personal opinion]
 - **My Angle**: [background / job / taste]
-- **Alternative Angles**: [2-3 angles, one sentence each on how they differ]
 
 ---
 
@@ -17,6 +16,13 @@
 **Narration**: [hook line]
 **Visual**: [clip + text overlay]
 **Type**: [conflict / suspense / surprising detail / strong opinion]
+
+---
+
+## Alternative Angles
+- **[Angle 1]**: [how it differs from typical videos]
+- **[Angle 2]**: [how it differs from typical videos]
+- **[Angle 3 optional]**: [how it differs from typical videos]
 
 ---
 
@@ -78,7 +84,7 @@ Constraints: No watermarks, no logos, no fabricated scenes or altered source fra
 ---
 
 ## Chinese Translation
-[Translate the script, shot list, title, cover, engagement section, rights notes,
-checklist, and Cover Prompt completely. Preserve the same uncertainty and legal
-limits.]
+[Translate the script, alternative angles, shot list, title, cover, engagement
+section, rights notes, checklist, and Cover Prompt completely. Preserve the same
+uncertainty and legal limits.]
 ```
