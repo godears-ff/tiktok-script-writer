@@ -172,3 +172,23 @@ Slang dates quickly and can make a script feel forced.
 - **Humor**: Self-deprecating, loud, expressive — not dry/understated (British) or aggressively ironic (Australian)
 - **Values**: Individualism, freedom, pursuit of happiness, "the American Dream" framing
 - **Politeness norms**: Americans are outwardly friendly and direct; "how are you" is a greeting, not a question
+
+## US TikTok Voice Calibration
+
+The goal is to sound like a credible American creator speaking to viewers, not
+like a reporter reading a wire story.
+
+| Content type | Voice to use | Voice to avoid |
+| --- | --- | --- |
+| News / public safety | Clear, direct, calm, source-aware | Tabloid panic, jokes, certainty beyond the record |
+| True crime / court | Suspenseful through sequence and evidence | Graphic spectacle, armchair verdicts |
+| Celebrity / creator news | Conversational, skeptical, occasionally wry | Press-release distance, corporate language |
+| Sports | Energetic, competitive, numbers-aware | Overly formal analysis or generic hype |
+| Film / TV / music | Fan-native, specific, opinion-led | Plot summary, Wikipedia chronology |
+| Technology | Plain-English, analogies, practical impact | Jargon stacking and buzzwords |
+| Health / mental health | Empathetic, measured, non-diagnostic | Fear-based hooks, diagnosis, mockery |
+| Minors | Protective, restrained, privacy-first | Speculation, full names, schools, addresses |
+
+Use standard American English and recognizable TikTok pacing. Slang is
+optional and must fit the creator, audience, region, and current usage.
+Do not force slang into legal, health, grief, abuse, or minor-related content.

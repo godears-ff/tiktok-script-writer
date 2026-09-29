@@ -5,6 +5,8 @@
 An agent skill for writing US-audience TikTok and short-form video scripts in
 English with a complete Chinese translation.
 
+Current release: **v1.1.0**
+
 ## Features
 
 - General TikTok scripts with hooks, scripts, storyboards, titles, covers,
@@ -14,6 +16,16 @@ English with a complete Chinese translation.
 - Commentary workflows for film, TV, sports, and mashup 二创 content.
 - Fact-grounded social-news and true-crime workflows with fact ledgers,
   sourcing, legal-language checks, and sensitive-content rules.
+- Viral-copy review using the four-check diagnostic and S.T.O.R.M. structure.
+- De-newsroom and de-Wikipedia rewriting for natural US TikTok voice.
+- Topic-specific tone calibration for news, entertainment, sports, technology,
+  film, music, health, and minor-related content.
+- Primary-viewer positioning, single-promise structure, testable hooks, and
+  share/save reasoning.
+- Production guidance for captions, search terms, sound-off readability,
+  voiceover delivery, A/B testing, analytics review, and recurring series.
+- Correction, community-moderation, sponsorship, rights, and disclosure
+  workflows.
 - Freshness gates that prevent stale trends, slang, statistics, and
   time-sensitive claims from being presented as current.
 - Rights, platform-policy, AI-disclosure, and pre-publish checks.
@@ -91,7 +103,7 @@ tiktok-script-writer/
 
 Releases use Git tags and GitHub Releases. See the
 [Releases](https://github.com/godears-ff/tiktok-script-writer/releases) page for
-the latest version.
+the latest version and [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Validation
 

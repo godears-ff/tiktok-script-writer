@@ -3,6 +3,7 @@ name: tiktok-script-writer
 description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
 metadata:
   short-description: TikTok scripts in English + Chinese translation
+  version: "1.1.0"
 ---
 
 # TikTok Script Writer (English + Chinese)
@@ -52,6 +53,15 @@ language rather than padding to hit a number.
 
 - Write natural American English for the intended US audience. Use
   contractions, short sentences, and concrete details.
+- Write for a US TikTok viewer, not a newspaper reader or encyclopedia.
+  Remove press-release and Wikipedia-style framing without weakening
+  attribution, legal limits, or factual accuracy. Calibrate the tone to the
+  topic: measured for news and true crime, conversational for celebrity and
+  creator stories, energetic for sports, analytical for technology, and
+  fan-native for film, TV, and music.
+- Define one primary viewer and one clear promise for the video. Do not mix
+  separate stories or audiences unless the relationship between them is the
+  central point. Aim to answer one main question per script.
 - The spoken script contains spoken words only. Put camera angles, actions,
   text overlays, props, B-roll, and scene notes in the storyboard.
 - Use natural Chinese that preserves the source tone. For news, legal, and
@@ -190,6 +200,44 @@ Constraints: No watermarks, no logos, leave room for text in the upper third
 For news or true crime, also prohibit fabricated evidence, fake documents,
 altered surveillance frames, and misleading reenactment visuals.
 
+### 11. Viral Copy Review (All Modes)
+
+When the user asks for a stronger hook, more engaging copy, a rewrite, or a
+viral-style review, read `references/viral-copy-review.md`.
+
+Use its four diagnostic checks and S.T.O.R.M. structure as an editing layer:
+
+1. Is the hook driven by a real conflict, contradiction, evidence, emotion, or
+   concrete result?
+2. Has news-release language been replaced with natural spoken English without
+   damaging accuracy or attribution?
+3. Does the pacing create a visual or audio cut every 2-3 seconds?
+4. Does the CTA create a useful decision, prediction, debate, or identity
+   response rather than a generic follow request?
+
+Do not force a false binary, invent a scandal, overstate legal claims, or
+promise virality. For social news, legal, health, minor-related, and
+sensitive-topic scripts, the Fact and Risk Notes and Sources always take
+priority over engagement tactics.
+
+### 12. Production, Publishing, and Learning
+
+For full packages or when the user asks about captions, testing, performance,
+corrections, accessibility, or recurring series, read
+`references/production-and-publishing.md`.
+
+Before final delivery, check:
+
+- Caption text and searchable language
+- Sound-off readability
+- Voiceover pronunciation and pacing notes when relevant
+- One-variable test plan when multiple hooks or covers are proposed
+- The correct correction and update process for factual errors
+- Rights, sponsorship, and platform-disclosure requirements
+
+Do not hardcode posting times, current trends, or engagement benchmarks.
+Those require current audience and platform verification.
+
 ## Output Format
 
 Use this order for a full deliverable:
@@ -206,6 +254,9 @@ Use this order for a full deliverable:
 
 ## Title and Cover
 [English title and cover description]
+
+## Caption and Search Text
+[English caption, first-line hook, searchable keywords, and hashtags if useful]
 
 ## CTA
 [English call to action]
@@ -282,6 +333,11 @@ Read only the resources needed for the current mode:
   guidance, rights checks, and pre-publish checks.
 - `references/social-news-scripts.md`: sourcing, fact-ledger, legal-language,
   sensitive-content, and correction rules.
+- `references/viral-copy-review.md`: four-check diagnostic, S.T.O.R.M.
+  rewriting structure, visual pacing guidance, and safe engagement triggers.
+- `references/production-and-publishing.md`: caption and discovery, sound-off
+  accessibility, delivery notes, testing, analytics reviews, corrections, and
+  recurring-series design.
 - `assets/script-template.md`: general script package.
 - `assets/storyboard-template.md`: general shot planning.
 - `assets/commentary-script-template.md`: commentary package.
@@ -295,3 +351,6 @@ US audience, storyboard, hook, Chinese translation, 二创, 解说, commentary,
 film/TV/sports commentary, mashup, clip commentary, breaking news, social news,
 true crime, police report, court records, public safety, surveillance footage,
 or viral incident commentary.
+
+Also use this skill when the user asks for S.T.O.R.M. copy, a viral-style
+rewrite, stronger retention hooks, or diagnostic feedback on a TikTok script.
