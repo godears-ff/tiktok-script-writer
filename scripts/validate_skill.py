@@ -15,6 +15,20 @@ REQUIRED_COMMENTARY_SECTIONS = (
     "## Rights and Platform Notes (commentary only)",
     "## Pre-Publish Checklist (commentary only)",
 )
+P0_REFERENCE = ROOT / "references" / "comparison-hook-patterns.md"
+P0_CONTRACT_STRINGS = (
+    "## Question Hook Bank",
+    "## Contrast Matrix",
+    "## Answer Axis (0:00-0:05)",
+)
+P1_REFERENCE = ROOT / "references" / "celebrity-explainer-series.md"
+P1_CARD = ROOT / "assets" / "celebrity-explainer-card.md"
+P1_CONTRACT_STRINGS = (
+    "## Automatic Trigger",
+    "## Six-Beat Series Structure",
+    "## Motive-Safe Phrasing",
+    "## Subtype CTA Routing",
+)
 
 
 def read_text(path: Path) -> str:
@@ -39,6 +53,7 @@ def validate_frontmatter(content: str, errors: list[str]) -> None:
     frontmatter = content[:end]
     name = frontmatter_value(frontmatter, "name")
     description = frontmatter_value(frontmatter, "description")
+    version = frontmatter_value(frontmatter, "  version")
 
     if name != ROOT.name:
         errors.append(f"Skill name '{name}' must match folder '{ROOT.name}'.")
@@ -46,6 +61,8 @@ def validate_frontmatter(content: str, errors: list[str]) -> None:
         errors.append("SKILL.md description is missing.")
     elif len(description) > 1024:
         errors.append("SKILL.md description exceeds 1024 characters.")
+    if version != '"1.6.0"':
+        errors.append('SKILL.md metadata version must be "1.6.0".')
 
 
 def validate_markdown(errors: list[str]) -> None:
@@ -72,6 +89,26 @@ def validate_contracts(skill_content: str, errors: list[str]) -> None:
     if "80-130 words" in commentary:
         errors.append("English 20-second commentary still uses the old word range.")
 
+    if not P0_REFERENCE.is_file():
+        errors.append("Missing P0 reference: references/comparison-hook-patterns.md")
+    else:
+        p0_content = read_text(P0_REFERENCE)
+        for required in P0_CONTRACT_STRINGS:
+            if required not in p0_content:
+                errors.append(f"P0 reference is missing contract string: {required}")
+
+    if not P1_REFERENCE.is_file():
+        errors.append(
+            "Missing P1 reference: references/celebrity-explainer-series.md"
+        )
+    else:
+        p1_content = read_text(P1_REFERENCE)
+        for required in P1_CONTRACT_STRINGS:
+            if required not in p1_content:
+                errors.append(f"P1 reference is missing contract string: {required}")
+    if not P1_CARD.is_file():
+        errors.append("Missing P1 card: assets/celebrity-explainer-card.md")
+
 
 def validate_python(errors: list[str]) -> None:
     for path in ROOT.rglob("*.py"):
@@ -81,6 +118,20 @@ def validate_python(errors: list[str]) -> None:
             compile(read_text(path), str(path), "exec")
         except SyntaxError as exc:
             errors.append(f"Python syntax error in {path.relative_to(ROOT)}: {exc}")
+
+    generator = ROOT / "scripts" / "generate-ideas.py"
+    if generator.is_file():
+        generator_content = read_text(generator)
+        for required in (
+            "comparison_questions",
+            "answer_axis_starters",
+            "p0_note",
+            "auto_mode",
+            "celebrity-explainer-series",
+            "p1_note",
+        ):
+            if required not in generator_content:
+                errors.append(f"Idea generator is missing output field: {required}")
 
 
 def main() -> int:

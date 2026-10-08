@@ -4,6 +4,9 @@
 ## Meta Info
 - **Niche**: [fitness / finance / dating / productivity / comedy / food / etc.]
 - **Format**: [hot take / storytime / educational / POV / transformation / etc.]
+- **Primary Market**: [US default]
+- **Commentary Stance**: [What the creator personally thinks or feels]
+- **Discussion Trigger**: [What viewers will want to debate]
 - **Target Length**: [15s / 30s / 45s / 60s / 80s (default)]
 - **Tone**: [hype / warm / sassy / authoritative / deadpan / relatable]
 - **Structure**: [standard / S.T.O.R.M.]
@@ -12,6 +15,11 @@
 - **Primary Viewer**: [the one group this video is for]
 - **One Promise**: [what the viewer will understand, feel, or learn]
 - **Central Question**: [the tension the video resolves or advances]
+- **Comparison Mode**: [none / A vs B / expected vs actual / before vs after / choice vs alternatives]
+- **Answer Axis**: [the distinction, tradeoff, or consequence that lands by 0:05]
+- **Series Mode**: [none / celebrity explainer series]
+- **Subject Type**: [celebrity / influencer / entertainer / public figure / other]
+- **High-Risk Override**: [none / social news / commentary / user-requested]
 
 ---
 
@@ -19,7 +27,36 @@
 **Text**: [exact spoken or on-screen text]
 **Type**: [curiosity gap / bold statement / pattern interrupt / question / direct challenge / visual / evidence / result]
 **Visual**: [what's on screen — close-up, text overlay, B-roll]
-**Hook Variants**: [outcome / conflict / evidence versions]
+**Hook Variants**: [outcome / question / conflict / evidence versions]
+**Answer Axis (0:05)**: [one sentence that tells viewers what kind of answer is coming]
+
+---
+
+## Contrast Matrix (when applicable)
+
+Use two to five rows. Every material claim needs a source or an explicit
+qualifier such as `reported`, `alleged`, `claimed`, or `unknown`.
+
+| Dimension | Side A / Expected | Side B / Actual | Evidence or Source | Qualifier |
+|-----------|-------------------|-----------------|--------------------|-----------|
+| Status or role | [fact] | [fact] | [source] | [confirmed / reported / disputed / unknown] |
+| Choice or behavior | [fact] | [fact] | [source] | [confirmed / reported / disputed / unknown] |
+| Resources or cost | [fact] | [fact] | [source] | [confirmed / reported / disputed / unknown] |
+| Consequence or tradeoff | [fact] | [fact] | [source] | [confirmed / reported / disputed / unknown] |
+| Unresolved question | [what is not known] | [what would change the interpretation] | [source gap] | [unknown] |
+
+---
+
+## Celebrity Explainer Beat Map (when auto-selected)
+
+| Beat | Time | Purpose | Evidence or Qualifier |
+|------|------|---------|-----------------------|
+| 1. Question hook | 0:00-0:03 | Use the viewer's supported question | [fact / report / explicit qualifier] |
+| 2. Answer axis | 0:03-0:07 | Tell viewers what kind of answer is coming | [confirmed / reported / disputed / unknown] |
+| 3. Three contrast layers | 0:07-0:42 | Expected vs actual; A vs B; cost vs consequence | [source for each layer] |
+| 4. Receipts and limits | 0:42-0:56 | Evidence plus what remains unknown | [source and qualifier] |
+| 5. Judgment | 0:56-0:70 | Creator stance without inventing motive | [interpretation only] |
+| 6. Decision CTA | 0:70-0:80 | Ask a topic-specific value question | [what viewers can evaluate] |
 
 ---
 

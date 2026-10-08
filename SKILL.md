@@ -1,9 +1,9 @@
 ---
 name: tiktok-script-writer
-description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
+description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Automatically use the celebrity explainer series mode for celebrity, influencer, entertainment-person, and public-figure sources unless a higher-risk mode takes precedence. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
 metadata:
   short-description: TikTok scripts in English + Chinese translation
-  version: "1.1.0"
+  version: "1.6.0"
 ---
 
 # TikTok Script Writer (English + Chinese)
@@ -15,6 +15,34 @@ and natural spoken language.
 For every full deliverable, output English first and a complete Chinese
 translation below it. The Chinese translation is mandatory.
 
+## Default Creator Style
+
+Unless the user explicitly requests another format, default to an American
+commentary/explainer voice:
+
+- Primary market and audience: United States.
+- Content form: commentary, reaction, opinion, discussion, chat, and
+  explanatory narration, not a wire-service news report.
+- Point of view: use a clear personal stance. The creator is allowed to say
+  "I think," "what gets me is," "the wild part is," or "I'm not buying that."
+- Tone: curious, conversational, opinionated, social, and discussion-driven.
+- Topic energy: gossip, surprise, humor, playful exaggeration, debate, and
+  audience reaction when the subject supports it.
+- Structure: facts are evidence for commentary, not a chronological
+  press-release recap.
+- Avoid encyclopedia chronology, formal transitions, and institutional
+  detachment.
+
+Controlled exaggeration is allowed for style and emotion, but never for
+numbers, quotes, injuries, charges, legal stage, or source certainty. Keep
+facts exact while making the reaction human.
+
+For death, abuse, health, minors, and active legal cases, preserve the
+commentary voice but reduce slang and avoid joking about victims or harm.
+
+Read `references/default-american-commentary-style.md` when the user asks for
+a new script or a rewrite unless they explicitly request a neutral news brief.
+
 ## Mode Selection
 
 Choose one primary mode before writing:
@@ -24,10 +52,40 @@ Choose one primary mode before writing:
 | General | Standard TikTok topic, story, hack, hot take, review, or POV | Full script package |
 | Commentary | Film, TV, sports, variety, or mashup clip commentary | Full commentary package |
 | Social news / true crime | Reports, public safety, police, court, surveillance, viral incidents, or real cases | Full sourced package |
+| Celebrity explainer series | Celebrity, influencer, streamer, actor, singer, athlete, royal, creator, public figure, or entertainment-person story about a personal decision, relationship, deal, career move, money, image, statement, controversy, or timeline | Fixed six-beat celebrity series package |
 
 If the request spans modes, use the mode that controls the risk. For example,
 commentary about an ongoing criminal case uses the social-news source and legal
 rules.
+
+### Automatic Celebrity Explainer Routing
+
+When the source primarily concerns a celebrity, influencer, streamer, actor,
+singer, athlete, royal, creator, entertainment figure, or other public
+personality, automatically select `Celebrity explainer series` unless one of
+these overrides applies:
+
+1. The user explicitly requests another format or a neutral news brief.
+2. The primary material is commentary on a film, TV, sports, or performance
+   clip rather than the person's decision or public behavior.
+3. Death, abuse, health, minors, active legal proceedings, criminal
+   allegations, or another high-risk issue controls the story.
+
+For an override, use the higher-risk mode and add the celebrity mode only as a
+safe tonal layer. Never let the six-beat entertainment format weaken fact,
+legal, privacy, or sensitive-content rules.
+
+When this mode is selected, read
+`references/celebrity-explainer-series.md` and use
+`assets/celebrity-explainer-card.md`.
+
+After choosing the mode, identify the topic family and read
+`references/topic-style-playbooks.md`. Use its playbook to set the tone,
+opening style, pacing, evidence density, CTA, and visual language.
+
+Do not force one voice across every topic. A breaking-news script, celebrity
+gossip story, sports analysis, and food video should feel different even when
+they use the same Hook and S.T.O.R.M. principles.
 
 If the user explicitly asks for only a script or a compact response, output
 Hook, Script, and the Chinese translation of both. Do not add a storyboard,
@@ -40,6 +98,10 @@ factual limits.
 - Hook: use the first 0-3 seconds for one core idea. The spoken hook is
   normally 8-12 words, not a hard five-word limit. A visual, evidence, or
   result hook can lead instead of spoken text.
+- Answer axis: by 0:05, reveal the direction of the answer in one clear
+  sentence. Say what the real issue is, what changed, or what the evidence
+  contradicts. Do not hide the entire premise behind "here's why" or "it gets
+  complicated."
 - Duration: use one length standard across the skill.
 
 | Mode | Default | Supported |
@@ -47,6 +109,7 @@ factual limits.
 | General | 80 seconds, about 190-210 spoken words | 15, 30, 45, 60, or 80 seconds |
 | Commentary | 80 seconds, about 190-210 spoken words | 15-30 seconds only on request; otherwise 45-90 seconds |
 | Social news | 60-80 seconds | 30, 60, or 80 seconds |
+| Celebrity explainer series | 60-80 seconds, about 160-210 spoken words | 30, 60, or 80 seconds |
 
 The user's explicit duration wins. Adapt the word count to speaking pace and
 language rather than padding to hit a number.
@@ -99,11 +162,25 @@ Pick a hook strategy from `references/tiktok-formats.md`. Lead with one clear
 idea, tension, evidence, or outcome. For news, the hook must be supported by
 the fact ledger.
 
+For topics built around a choice, public-figure decision, two people or
+brands, expected versus actual behavior, before versus after, or a status
+gap, read `references/comparison-hook-patterns.md`. Build the contrast matrix
+and choose one supported question hook when it fits. Before drafting, define
+the answer axis that must land by 0:05. Do not invent a comparison, motive,
+relationship, or decision that the source does not support.
+
 ### 3. Script Body
 
 Use the duration standard in Core Rules. Build meaningful tension and deliver
 the payoff without filler. End with a CTA that fits the content rather than
-forcing controversy.
+forcing controversy. After the hook, use the answer-axis sentence to tell the
+viewer what distinction, tradeoff, or consequence the rest of the script will
+explain.
+
+For `Celebrity explainer series`, use the fixed six beats from
+`references/celebrity-explainer-series.md`: question hook, answer axis, three
+contrast layers, receipts or qualifiers, judgment, and decision CTA. Do not
+replace the series structure with a chronological biography or press recap.
 
 Read `references/us-audience.md` only when audience psychology, cultural
 context, humor style, demographics, or calendar timing materially affects the
@@ -209,10 +286,11 @@ Use its four diagnostic checks and S.T.O.R.M. structure as an editing layer:
 
 1. Is the hook driven by a real conflict, contradiction, evidence, emotion, or
    concrete result?
-2. Has news-release language been replaced with natural spoken English without
+2. Does the answer axis land by 0:05 and is it supported by the source?
+3. Has news-release language been replaced with natural spoken English without
    damaging accuracy or attribution?
-3. Does the pacing create a visual or audio cut every 2-3 seconds?
-4. Does the CTA create a useful decision, prediction, debate, or identity
+4. Does the pacing create a visual or audio cut every 2-3 seconds?
+5. Does the CTA create a useful decision, prediction, debate, or identity
    response rather than a generic follow request?
 
 Do not force a false binary, invent a scandal, overstate legal claims, or
@@ -238,6 +316,75 @@ Before final delivery, check:
 Do not hardcode posting times, current trends, or engagement benchmarks.
 Those require current audience and platform verification.
 
+### 13. Aggregated Word Document Deliverables
+
+When the user asks to compile multiple scripts into a Word document, read
+`references/aggregated-document-deliverables.md`.
+
+For each script in the document, preserve:
+
+- English script with no timecodes
+- Chinese translation with timecodes
+- Storyboard with Chinese headers and Chinese cell content
+- Title and cover copy in English and Chinese
+- Caption, first line, search keywords, and hashtags
+- CTA in English and Chinese
+- Fact and Risk Notes in English and Chinese
+- Sources
+
+Keep separate iterations such as v1.0 and v1.1 as distinct numbered entries
+when the user asks for all generated versions.
+
+### 14. Creator Voice and Final Quality Review
+
+When a creator supplies writing samples, approved scripts, previous captions,
+or explicit voice preferences, read `references/creator-voice-profile.md` and
+use `assets/creator-voice-profile-template.md`.
+
+Record:
+
+- Primary viewer
+- Signature and banned phrases
+- Sentence length and pacing
+- Humor and emotional range
+- Authority and skepticism level
+- Topic-specific tone changes
+- CTA style
+- Visual and caption patterns
+- Legal, privacy, and brand-safety boundaries
+
+Never imitate another living creator's signature style without permission.
+The voice profile should capture the user's own approved patterns.
+
+Before final delivery, run `references/quality-scorecard.md` when the task is
+substantial, high-risk, or requested as an optimization pass. A high score
+does not override factual accuracy, legal limits, privacy, or platform policy.
+
+### 15. Topic-Style Routing
+
+For topic-specific tone and structure, read
+`references/topic-style-playbooks.md` and use
+`assets/topic-style-card.md` when the user wants a repeatable format.
+
+Select one controlling playbook:
+
+- Breaking news / public safety
+- True crime / courts
+- Celebrity / creator gossip
+- Music / hip-hop news
+- Sports
+- Film / TV / entertainment commentary
+- Technology / product explainers
+- Business / entrepreneurship
+- Health / mental health
+- Fashion / beauty / lifestyle
+- Food / travel / local stories
+- Viral internet / memes / wholesome stories
+- Politics / high-sensitivity public issues
+
+If a story spans multiple topics, use the highest-risk playbook for factual
+limits and add another playbook only as a tonal layer.
+
 ## Output Format
 
 Use this order for a full deliverable:
@@ -245,9 +392,14 @@ Use this order for a full deliverable:
 ```markdown
 ## Hook
 [English hook] - [hook type]
+Answer axis: [one sentence that lands the direction of the answer by 0:05]
 
 ## Script
 [Spoken English only. No camera angles, action notes, or timecodes.]
+
+## Series Beat Map (celebrity explainer series only)
+[Question hook / answer axis / three contrast layers / receipts or qualifiers /
+judgment / decision CTA]
 
 ## Storyboard
 [English storyboard table]
@@ -333,15 +485,34 @@ Read only the resources needed for the current mode:
   guidance, rights checks, and pre-publish checks.
 - `references/social-news-scripts.md`: sourcing, fact-ledger, legal-language,
   sensitive-content, and correction rules.
+- `references/comparison-hook-patterns.md`: question-first hooks, contrast
+  matrices, answer-axis rules, and safe comparison templates.
+- `references/celebrity-explainer-series.md`: automatic routing, six-beat
+  series structure, motive-safe phrasing, and subtype CTA patterns.
 - `references/viral-copy-review.md`: four-check diagnostic, S.T.O.R.M.
   rewriting structure, visual pacing guidance, and safe engagement triggers.
 - `references/production-and-publishing.md`: caption and discovery, sound-off
   accessibility, delivery notes, testing, analytics reviews, corrections, and
   recurring-series design.
+- `references/aggregated-document-deliverables.md`: required structure for
+  multi-script Word files and Chinese storyboard translation.
+- `references/creator-voice-profile.md`: account voice, audience, signature
+  language, banned phrasing, and topic-specific tone.
+- `references/quality-scorecard.md`: final 100-point review across retention,
+  clarity, evidence, safety, bilingual fidelity, and production readiness.
+- `references/topic-style-playbooks.md`: topic-specific hooks, tone, pacing,
+  evidence density, CTA, visual language, and common mistakes.
+- `references/default-american-commentary-style.md`: default US commentary
+  voice, personal-stance rules, controlled exaggeration, and news-to-commentary
+  conversion.
 - `assets/script-template.md`: general script package.
 - `assets/storyboard-template.md`: general shot planning.
 - `assets/commentary-script-template.md`: commentary package.
 - `assets/social-news-script-template.md`: sourced news package.
+- `assets/creator-voice-profile-template.md`: repeatable account voice profile.
+- `assets/quality-review-scorecard.md`: fillable final QA checklist.
+- `assets/topic-style-card.md`: reusable topic-specific style configuration.
+- `assets/celebrity-explainer-card.md`: fillable celebrity series episode card.
 - `scripts/generate-ideas.py`: optional seed generation for a requested niche.
 
 ## Triggers
@@ -351,6 +522,12 @@ US audience, storyboard, hook, Chinese translation, 二创, 解说, commentary,
 film/TV/sports commentary, mashup, clip commentary, breaking news, social news,
 true crime, police report, court records, public safety, surveillance footage,
 or viral incident commentary.
+
+Also use this skill when the supplied source is primarily about a celebrity,
+influencer, streamer, actor, singer, athlete, royal, creator, entertainment
+figure, or public personality, even if the user only provides the source and
+asks for a script. Apply the automatic celebrity explainer routing unless a
+higher-risk mode or explicit user format takes precedence.
 
 Also use this skill when the user asks for S.T.O.R.M. copy, a viral-style
 rewrite, stronger retention hooks, or diagnostic feedback on a TikTok script.

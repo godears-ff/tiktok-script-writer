@@ -8,6 +8,28 @@ It can improve retention and interaction. It does not guarantee virality, and
 it must never override factual accuracy, legal limits, privacy, or source
 attribution.
 
+## P0 Comparison Layer
+
+When the topic is a choice, public-figure decision, two-person or two-brand
+comparison, expected-versus-actual behavior, before-versus-after change, or a
+status gap, use `comparison-hook-patterns.md` before rewriting.
+
+When the automatic celebrity explainer route applies, also use
+`celebrity-explainer-series.md` and preserve its six beats.
+
+Apply three checks:
+
+1. **Question-first hook**: use the question viewers already have when the
+   source supports its premise.
+2. **Answer axis by 0:05**: after the hook, state the distinction, tradeoff,
+   or contradiction that the script will explain.
+3. **Contrast matrix**: compare only concrete, relevant dimensions with a
+   source or explicit qualifier for every material claim.
+
+The answer axis is not the full answer. It tells viewers what kind of answer
+is coming. For example: "The real issue is not age. It is money." Do not use
+this structure to turn a rumor, private motive, or fan theory into fact.
+
 ## Four Diagnostic Checks
 
 ### 1. Hook
@@ -240,8 +262,10 @@ The following override the viral template:
 When the user asks for a diagnostic review, return:
 
 1. Hook score and diagnosis.
-2. Pacing and language issues.
-3. Fact and legal risk.
-4. CTA diagnosis.
-5. A rewritten version.
-6. A short note explaining what changed and why.
+2. Answer-axis diagnosis: does the direction land by 0:05?
+3. Contrast-matrix quality when applicable.
+4. Pacing and language issues.
+5. Fact and legal risk.
+6. CTA diagnosis.
+7. A rewritten version.
+8. A short note explaining what changed and why.

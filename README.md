@@ -5,7 +5,7 @@
 An agent skill for writing US-audience TikTok and short-form video scripts in
 English with a complete Chinese translation.
 
-Current release: **v1.1.0**
+Current release: **v1.6.0**
 
 ## Features
 
@@ -17,6 +17,14 @@ Current release: **v1.1.0**
 - Fact-grounded social-news and true-crime workflows with fact ledgers,
   sourcing, legal-language checks, and sensitive-content rules.
 - Viral-copy review using the four-check diagnostic and S.T.O.R.M. structure.
+- P0 comparison layer with a question-hook bank, contrast matrix, and a
+  supported answer axis that must land by 0:05.
+- Idea-generator output now includes comparison-question seeds and answer-axis
+  starters that still require source verification.
+- Automatic celebrity explainer series routing for celebrities, influencers,
+  streamers, entertainment figures, and public personalities.
+- A fixed six-beat celebrity series format with motive-safe wording and
+  subtype-specific CTAs.
 - De-newsroom and de-Wikipedia rewriting for natural US TikTok voice.
 - Topic-specific tone calibration for news, entertainment, sports, technology,
   film, music, health, and minor-related content.
@@ -26,6 +34,17 @@ Current release: **v1.1.0**
   voiceover delivery, A/B testing, analytics review, and recurring series.
 - Correction, community-moderation, sponsorship, rights, and disclosure
   workflows.
+- Creator voice profiles for audience, tone, signature phrases, banned
+  phrasing, pacing, and topic-specific style changes.
+- A 100-point final quality scorecard covering hook strength, clarity,
+  pacing, evidence, voice, CTA, safety, and bilingual fidelity.
+- Aggregated Word document rules with Chinese storyboard headers and cell
+  content, Caption, keywords, hashtags, risk notes, and sources.
+- Topic-style routing for news, true crime, celebrity gossip, music, sports,
+  film, technology, business, health, lifestyle, food, viral stories, and
+  high-sensitivity issues.
+- Default US commentary voice with personal stance, conversational narration,
+  curiosity, debate, controlled exaggeration, and non-newsroom structure.
 - Freshness gates that prevent stale trends, slang, statistics, and
   time-sensitive claims from being presented as current.
 - Rights, platform-policy, AI-disclosure, and pre-publish checks.
