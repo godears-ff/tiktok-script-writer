@@ -5,7 +5,7 @@
 An agent skill for writing US-audience TikTok and short-form video scripts in
 English with a complete Chinese translation.
 
-Current release: **v1.6.0**
+Current release: **v1.7.0**
 
 ## Features
 
@@ -25,6 +25,11 @@ Current release: **v1.6.0**
   streamers, entertainment figures, and public personalities.
 - A fixed six-beat celebrity series format with motive-safe wording and
   subtype-specific CTAs.
+- Automatic person profile introduction routing for resumes, CVs, bios,
+  LinkedIn-style profiles, speaker profiles, and structured career facts.
+- A distinct six-beat profile structure focused on positioning, career
+  throughline, foundations, turning points, expertise and impact, and future
+  outlook.
 - De-newsroom and de-Wikipedia rewriting for natural US TikTok voice.
 - Topic-specific tone calibration for news, entertainment, sports, technology,
   film, music, health, and minor-related content.

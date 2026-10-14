@@ -35,6 +35,21 @@ When the automatic celebrity mode applies, also verify:
 - The judgment is visibly framed as interpretation.
 - The CTA matches the subtype rather than using a generic "What do you think?"
 
+## Person Profile Introduction Checks
+
+When the automatic person profile mode applies, verify:
+
+- The script is a coherent introduction, not a list of resume bullets.
+- One clear career thesis connects the person's background, expertise, and
+  current contribution.
+- The hook uses a verified role or achievement, not inflated praise.
+- Two or three turning points are selected rather than every resume item.
+- Skills and impact are supported by dates, roles, projects, or measurable
+  results.
+- The ending looks forward and does not invent goals, motives, or private
+  information.
+- The structure is visibly different from the celebrity explainer series.
+
 ## Suggested Thresholds
 
 - 90-100: publication-ready after normal QA

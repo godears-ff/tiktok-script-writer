@@ -2,7 +2,8 @@
 """
 TikTok topic idea generator.
 Generates 5 trending topic ideas plus P0 comparison-question seeds and
-answer-axis starters for a given niche and US audience.
+answer-axis starters for a given niche and US audience. Profile, resume, bio,
+and CV inputs route to the person profile introduction mode.
 """
 import json
 import sys
@@ -70,6 +71,13 @@ NICHE_ANGLES = {
         "What does [career move] change for [star]?",
         "Was this image control, business strategy, or both?",
         "The real question isn't [rumor]. It's what the record can prove."
+    ],
+    "profile": [
+        "The career throughline behind [person]",
+        "How [person] built expertise in [field]",
+        "From [early background] to [current position]",
+        "Three turning points that shaped [person]'s work",
+        "What [person] brings to [current mission]"
     ]
 }
 
@@ -118,6 +126,11 @@ COMPARISON_QUESTIONS = {
         "Why did [star] turn down or choose [project / deal / strategy]?",
         "The early story looked like [X]. The career record points to [Y].",
         "Was this a career move, an image reset, or both?"
+    ],
+    "profile": [
+        "What single throughline connects [person]'s career?",
+        "Which turning point best explains [person]'s current work?",
+        "What makes [person]'s path distinct in [field]?"
     ]
 }
 
@@ -128,10 +141,20 @@ ANSWER_AXIS_STARTERS = [
     "The question isn't what people believe. It's what the record can prove.",
     "One side risks [cost A]. The other risks [cost B]."
 ]
+PROFILE_POSITIONING_STARTERS = [
+    "[Person] built a career around [central theme].",
+    "From [foundation] to [current role], [person] has focused on [impact].",
+    "[Person]'s work connects [background] with [current mission].",
+    "What stands out in [person]'s path is [verified strength].",
+    "[Person] brings [capability] to [field or mission]."
+]
 CELEBRITY_NICHES = {"celebrity", "influencer", "entertainment"}
+PROFILE_ALIASES = {"profile", "bio", "resume", "cv"}
+PROFILE_NICHES = {"profile"}
 
 def main():
-    niche = sys.argv[1].lower() if len(sys.argv) > 1 else "general"
+    raw_niche = sys.argv[1].lower() if len(sys.argv) > 1 else "general"
+    niche = "profile" if raw_niche in PROFILE_ALIASES else raw_niche
     if niche in NICHE_ANGLES:
         ideas = NICHE_ANGLES[niche]
         comparison_questions = COMPARISON_QUESTIONS[niche]
@@ -151,18 +174,28 @@ def main():
     output = {
         "niche": niche,
         "auto_mode": (
-            "celebrity-explainer-series"
+            "person-profile-introduction"
+            if niche in PROFILE_NICHES
+            else "celebrity-explainer-series"
             if niche in CELEBRITY_NICHES
             else "topic-default"
         ),
         "auto_route_reason": (
-            "Celebrity, influencer, or entertainment-person source."
+            "Resume, CV, bio, or structured person profile source."
+            if niche in PROFILE_NICHES
+            else "Celebrity, influencer, or entertainment-person source."
             if niche in CELEBRITY_NICHES
             else "No automatic celebrity-series trigger detected."
         ),
+        "target_duration_seconds": "60-80" if niche in PROFILE_NICHES else None,
+        "default_output_language": "English" if niche in PROFILE_NICHES else None,
         "ideas": ideas,
         "comparison_questions": comparison_questions,
-        "answer_axis_starters": ANSWER_AXIS_STARTERS,
+        "answer_axis_starters": (
+            PROFILE_POSITIONING_STARTERS
+            if niche in PROFILE_NICHES
+            else ANSWER_AXIS_STARTERS
+        ),
         "p0_note": (
             "Verify every premise, source, and qualifier before turning a seed "
             "into a script. Placeholders are not claims."
@@ -170,6 +203,11 @@ def main():
         "p1_note": (
             "Higher-risk social-news, legal, death, abuse, health, minor, or "
             "user-requested modes override the celebrity auto route."
+        ),
+        "p2_note": (
+            "Person profile introductions use a distinct factual, "
+            "career-arc structure and must not reuse the celebrity explainer "
+            "question-contrast-judgment format."
         )
     }
     print(json.dumps(output, indent=2))

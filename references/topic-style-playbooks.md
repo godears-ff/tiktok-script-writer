@@ -56,6 +56,25 @@ playbook, then adjust without replacing the factual and safety rules.
 - Avoid: presenting rumors as fact, sexual shaming, platform logos, fake
   texts, private-motive certainty, and body-based judgment
 
+## Person Profile / Biography Introduction
+
+- Mode: automatically use `Person profile introduction` when the source is a
+  resume, CV, bio, speaker profile, company bio, LinkedIn-style summary, or
+  structured set of career facts. Read `person-profile-introduction.md`.
+- Viewer: people evaluating the person's credibility, career, expertise, or
+  potential contribution
+- Tone: authoritative, warm, specific, and forward-looking
+- Hook: positioning plus the strongest verified achievement
+- Structure: position -> core thesis -> foundations -> turning points ->
+  expertise and impact -> forward outlook
+- Evidence: roles, dates, education, skills, projects, results, awards, and
+  verified public contributions
+- Pacing: steady; one career-defining point at a time
+- Visuals: portrait, career timeline, role cards, project/result graphics
+- CTA: optional; prefer a forward-looking close over forced debate
+- Avoid: resume bullets with no narrative, invented motives, private-life
+  speculation, inflated praise, and celebrity-gossip framing
+
 ## Music / Hip-Hop News
 
 - Viewer: genre fans, chart watchers, and industry followers

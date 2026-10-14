@@ -17,9 +17,10 @@
 - **Central Question**: [the tension the video resolves or advances]
 - **Comparison Mode**: [none / A vs B / expected vs actual / before vs after / choice vs alternatives]
 - **Answer Axis**: [the distinction, tradeoff, or consequence that lands by 0:05]
-- **Series Mode**: [none / celebrity explainer series]
+- **Series Mode**: [none / celebrity explainer series / person profile introduction]
 - **Subject Type**: [celebrity / influencer / entertainer / public figure / other]
 - **High-Risk Override**: [none / social news / commentary / user-requested]
+- **Output Language**: [English only when explicitly requested / English + Chinese]
 
 ---
 
@@ -57,6 +58,19 @@ qualifier such as `reported`, `alleged`, `claimed`, or `unknown`.
 | 4. Receipts and limits | 0:42-0:56 | Evidence plus what remains unknown | [source and qualifier] |
 | 5. Judgment | 0:56-0:70 | Creator stance without inventing motive | [interpretation only] |
 | 6. Decision CTA | 0:70-0:80 | Ask a topic-specific value question | [what viewers can evaluate] |
+
+---
+
+## Person Profile Introduction Beat Map (when auto-selected)
+
+| Beat | Time | Purpose | Source Check |
+|------|------|---------|--------------|
+| 1. Position | 0:00-0:05 | Lead with the person's role and strongest verified credential | [resume / bio fact] |
+| 2. Core thesis | 0:05-0:12 | Explain the throughline of the person's career | [synthesis from supplied facts] |
+| 3. Foundations | 0:12-0:25 | Cover origin, education, training, or early career | [dates and roles] |
+| 4. Turning points | 0:25-0:47 | Explain two or three career-defining milestones | [role + action + result] |
+| 5. Expertise and impact | 0:47-0:65 | Show capabilities, outcomes, projects, or recognition | [specific evidence] |
+| 6. Forward outlook | 0:65-0:80 | Close with current mission and future contribution | [no speculation] |
 
 ---
 

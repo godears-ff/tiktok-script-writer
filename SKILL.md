@@ -1,9 +1,9 @@
 ---
 name: tiktok-script-writer
-description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Automatically use the celebrity explainer series mode for celebrity, influencer, entertainment-person, and public-figure sources unless a higher-risk mode takes precedence. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
+description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Automatically use the celebrity explainer series mode for celebrity, influencer, entertainment-person, and public-figure sources unless a higher-risk mode takes precedence. Automatically use the person profile introduction mode for resumes, CVs, bios, LinkedIn-style summaries, and structured person facts. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
 metadata:
   short-description: TikTok scripts in English + Chinese translation
-  version: "1.6.0"
+  version: "1.7.0"
 ---
 
 # TikTok Script Writer (English + Chinese)
@@ -53,6 +53,7 @@ Choose one primary mode before writing:
 | Commentary | Film, TV, sports, variety, or mashup clip commentary | Full commentary package |
 | Social news / true crime | Reports, public safety, police, court, surveillance, viral incidents, or real cases | Full sourced package |
 | Celebrity explainer series | Celebrity, influencer, streamer, actor, singer, athlete, royal, creator, public figure, or entertainment-person story about a personal decision, relationship, deal, career move, money, image, statement, controversy, or timeline | Fixed six-beat celebrity series package |
+| Person profile introduction | Resume, CV, bio, LinkedIn-style profile, speaker profile, company bio, or structured facts about a person's background, career, expertise, achievements, and current mission | 60-80 second English profile script; Chinese only when requested |
 
 If the request spans modes, use the mode that controls the risk. For example,
 commentary about an ongoing criminal case uses the social-news source and legal
@@ -78,6 +79,33 @@ legal, privacy, or sensitive-content rules.
 When this mode is selected, read
 `references/celebrity-explainer-series.md` and use
 `assets/celebrity-explainer-card.md`.
+
+### Automatic Person Profile Routing
+
+When the user supplies a resume, CV, biography, speaker profile,
+LinkedIn-style summary, company bio, or structured facts about a person and
+asks for an introduction, profile, or career explainer, automatically select
+`Person profile introduction`.
+
+This mode overrides `Celebrity explainer series` when the request is to
+introduce who the person is rather than analyze a public decision,
+relationship, controversy, or event.
+
+Use `Person profile introduction` when:
+
+- The source is structured career, education, skill, or achievement material.
+- The user asks for a person introduction, profile script, biography
+  explainer, or 60-80 second introduction.
+- The desired direction is factual, informative, and forward-looking rather
+  than gossip, debate, or judgment.
+
+High-risk death, abuse, health, minor, criminal, or active-legal material
+still follows the higher-risk social-news rules. Do not turn a resume or bio
+into private-life speculation.
+
+When this mode is selected, read
+`references/person-profile-introduction.md` and use
+`assets/person-profile-introduction-card.md`.
 
 After choosing the mode, identify the topic family and read
 `references/topic-style-playbooks.md`. Use its playbook to set the tone,
@@ -110,6 +138,7 @@ factual limits.
 | Commentary | 80 seconds, about 190-210 spoken words | 15-30 seconds only on request; otherwise 45-90 seconds |
 | Social news | 60-80 seconds | 30, 60, or 80 seconds |
 | Celebrity explainer series | 60-80 seconds, about 160-210 spoken words | 30, 60, or 80 seconds |
+| Person profile introduction | 60-80 seconds, about 160-210 spoken words | 60 or 80 seconds |
 
 The user's explicit duration wins. Adapt the word count to speaking pace and
 language rather than padding to hit a number.
@@ -181,6 +210,17 @@ For `Celebrity explainer series`, use the fixed six beats from
 `references/celebrity-explainer-series.md`: question hook, answer axis, three
 contrast layers, receipts or qualifiers, judgment, and decision CTA. Do not
 replace the series structure with a chronological biography or press recap.
+
+For `Person profile introduction`, use the fixed six beats from
+`references/person-profile-introduction.md`: position, core thesis,
+foundations, turning points, expertise and impact, and forward outlook. Do not
+reuse the celebrity explainer question-contrast-judgment structure unless the
+user explicitly requests that separate format.
+
+When the user explicitly requests English only for `Person profile
+introduction`, output the English hook and script without the Chinese
+translation. For every other mode, retain the normal bilingual contract unless
+the user explicitly overrides it.
 
 Read `references/us-audience.md` only when audience psychology, cultural
 context, humor style, demographics, or calendar timing materially affects the
@@ -401,6 +441,10 @@ Answer axis: [one sentence that lands the direction of the answer by 0:05]
 [Question hook / answer axis / three contrast layers / receipts or qualifiers /
 judgment / decision CTA]
 
+## Profile Beat Map (person profile introduction only)
+[Position / core thesis / foundations / turning points / expertise and impact /
+forward outlook]
+
 ## Storyboard
 [English storyboard table]
 
@@ -489,6 +533,8 @@ Read only the resources needed for the current mode:
   matrices, answer-axis rules, and safe comparison templates.
 - `references/celebrity-explainer-series.md`: automatic routing, six-beat
   series structure, motive-safe phrasing, and subtype CTA patterns.
+- `references/person-profile-introduction.md`: automatic profile routing,
+  resume-to-story rules, timing, English-only output, and six-beat structure.
 - `references/viral-copy-review.md`: four-check diagnostic, S.T.O.R.M.
   rewriting structure, visual pacing guidance, and safe engagement triggers.
 - `references/production-and-publishing.md`: caption and discovery, sound-off
@@ -513,6 +559,8 @@ Read only the resources needed for the current mode:
 - `assets/quality-review-scorecard.md`: fillable final QA checklist.
 - `assets/topic-style-card.md`: reusable topic-specific style configuration.
 - `assets/celebrity-explainer-card.md`: fillable celebrity series episode card.
+- `assets/person-profile-introduction-card.md`: fillable profile introduction
+  card.
 - `scripts/generate-ideas.py`: optional seed generation for a requested niche.
 
 ## Triggers
@@ -528,6 +576,12 @@ influencer, streamer, actor, singer, athlete, royal, creator, entertainment
 figure, or public personality, even if the user only provides the source and
 asks for a script. Apply the automatic celebrity explainer routing unless a
 higher-risk mode or explicit user format takes precedence.
+
+Also use this skill when the user supplies a resume, CV, bio, speaker profile,
+LinkedIn-style summary, company bio, or structured person facts and asks for an
+introduction, profile, biography explainer, or 60-80 second English script.
+Automatically use `Person profile introduction` instead of the celebrity
+explainer structure.
 
 Also use this skill when the user asks for S.T.O.R.M. copy, a viral-style
 rewrite, stronger retention hooks, or diagnostic feedback on a TikTok script.

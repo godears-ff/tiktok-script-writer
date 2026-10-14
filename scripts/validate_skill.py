@@ -29,6 +29,15 @@ P1_CONTRACT_STRINGS = (
     "## Motive-Safe Phrasing",
     "## Subtype CTA Routing",
 )
+P2_REFERENCE = ROOT / "references" / "person-profile-introduction.md"
+P2_CARD = ROOT / "assets" / "person-profile-introduction-card.md"
+P2_CONTRACT_STRINGS = (
+    "## Automatic Profile Trigger",
+    "## Six-Beat Profile Structure",
+    "## Resume-to-Story Rules",
+    "## Differentiation from Celebrity Explainer",
+    "## English-Only Output",
+)
 
 
 def read_text(path: Path) -> str:
@@ -61,8 +70,8 @@ def validate_frontmatter(content: str, errors: list[str]) -> None:
         errors.append("SKILL.md description is missing.")
     elif len(description) > 1024:
         errors.append("SKILL.md description exceeds 1024 characters.")
-    if version != '"1.6.0"':
-        errors.append('SKILL.md metadata version must be "1.6.0".')
+    if version != '"1.7.0"':
+        errors.append('SKILL.md metadata version must be "1.7.0".')
 
 
 def validate_markdown(errors: list[str]) -> None:
@@ -109,6 +118,20 @@ def validate_contracts(skill_content: str, errors: list[str]) -> None:
     if not P1_CARD.is_file():
         errors.append("Missing P1 card: assets/celebrity-explainer-card.md")
 
+    if not P2_REFERENCE.is_file():
+        errors.append(
+            "Missing P2 reference: references/person-profile-introduction.md"
+        )
+    else:
+        p2_content = read_text(P2_REFERENCE)
+        for required in P2_CONTRACT_STRINGS:
+            if required not in p2_content:
+                errors.append(f"P2 reference is missing contract string: {required}")
+    if not P2_CARD.is_file():
+        errors.append(
+            "Missing P2 card: assets/person-profile-introduction-card.md"
+        )
+
 
 def validate_python(errors: list[str]) -> None:
     for path in ROOT.rglob("*.py"):
@@ -129,6 +152,11 @@ def validate_python(errors: list[str]) -> None:
             "auto_mode",
             "celebrity-explainer-series",
             "p1_note",
+            "person-profile-introduction",
+            "target_duration_seconds",
+            "default_output_language",
+            "p2_note",
+            "PROFILE_POSITIONING_STARTERS",
         ):
             if required not in generator_content:
                 errors.append(f"Idea generator is missing output field: {required}")

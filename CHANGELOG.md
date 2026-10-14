@@ -2,6 +2,28 @@
 
 All notable changes to this skill are documented here.
 
+## [1.7.0] - 2026-10-14
+
+### Added
+
+- Automatic `Person profile introduction` routing for resumes, CVs, bios,
+  LinkedIn-style summaries, speaker profiles, company bios, and structured
+  person facts.
+- A six-beat profile structure: position, core thesis, foundations, turning
+  points, expertise and impact, and forward outlook.
+- Resume-to-story rules, English-only output support, and a dedicated profile
+  introduction card.
+- A differentiation contract that keeps profile introductions separate from
+  the celebrity explainer series.
+
+### Changed
+
+- Profile introductions default to a 60-80 second English script when the user
+  explicitly requests English only.
+- Topic playbooks, script templates, quality scorecards, and the idea
+  generator now support the profile introduction route.
+- High-risk facts still follow social-news and legally safe mode precedence.
+
 ## [1.6.0] - 2026-10-08
 
 ### Added
