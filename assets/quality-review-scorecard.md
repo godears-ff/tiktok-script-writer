@@ -6,6 +6,8 @@ Answer Axis by 0:05: PASS / FAIL
 Contrast Matrix: PASS / FAIL / N/A
 Celebrity Explainer Six Beats: PASS / FAIL / N/A
 Person Profile Six Beats: PASS / FAIL / N/A
+Person Profile 3-Second Hook: PASS / FAIL / N/A
+Person Profile Source Retrieval: PASS / FAIL / N/A
 Viewer Promise: __ / 10
 Clarity: __ / 10
 Pacing: __ / 10

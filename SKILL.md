@@ -1,9 +1,9 @@
 ---
 name: tiktok-script-writer
-description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Automatically use the celebrity explainer series mode for celebrity, influencer, entertainment-person, and public-figure sources unless a higher-risk mode takes precedence. Automatically use the person profile introduction mode for resumes, CVs, bios, LinkedIn-style summaries, and structured person facts. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
+description: Write US-audience TikTok and short-form scripts in English with complete Chinese translation, including hooks, storyboards, title/cover copy, 二创 commentary, and fact-grounded social-news or true-crime workflows. Automatically use the celebrity explainer series mode for celebrity, influencer, entertainment-person, and public-figure sources unless a higher-risk mode takes precedence. Automatically use the person profile introduction mode for resumes, CVs, bios, LinkedIn-style summaries, structured person facts, and source URLs such as Wikipedia profiles, while retrieving external pages through available web-reading skills. Use when the user requests TikTok scripts, English short-form copy, or commentary and needs Chinese translation.
 metadata:
   short-description: TikTok scripts in English + Chinese translation
-  version: "1.7.0"
+  version: "1.8.0"
 ---
 
 # TikTok Script Writer (English + Chinese)
@@ -53,7 +53,7 @@ Choose one primary mode before writing:
 | Commentary | Film, TV, sports, variety, or mashup clip commentary | Full commentary package |
 | Social news / true crime | Reports, public safety, police, court, surveillance, viral incidents, or real cases | Full sourced package |
 | Celebrity explainer series | Celebrity, influencer, streamer, actor, singer, athlete, royal, creator, public figure, or entertainment-person story about a personal decision, relationship, deal, career move, money, image, statement, controversy, or timeline | Fixed six-beat celebrity series package |
-| Person profile introduction | Resume, CV, bio, LinkedIn-style profile, speaker profile, company bio, or structured facts about a person's background, career, expertise, achievements, and current mission | 60-80 second English profile script; Chinese only when requested |
+| Person profile introduction | Resume, CV, bio, LinkedIn-style profile, speaker profile, company bio, structured person facts, or a source URL such as a Wikipedia profile | 60-80 second English profile script plus complete Chinese translation |
 
 If the request spans modes, use the mode that controls the risk. For example,
 commentary about an ongoing criminal case uses the social-news source and legal
@@ -86,6 +86,12 @@ When the user supplies a resume, CV, biography, speaker profile,
 LinkedIn-style summary, company bio, or structured facts about a person and
 asks for an introduction, profile, or career explainer, automatically select
 `Person profile introduction`.
+
+The same route applies when the user supplies a person-related URL, including
+a Wikipedia page, official biography, company profile, or interview page. Use
+the available Codex retrieval capability, preferably the `agent-reach` skill
+or its web-reading backend, to read the page before drafting. Do not write
+from a search-result snippet or invent facts to fill a missing page.
 
 This mode overrides `Celebrity explainer series` when the request is to
 introduce who the person is rather than analyze a public decision,
@@ -154,6 +160,10 @@ language rather than padding to hit a number.
 - Define one primary viewer and one clear promise for the video. Do not mix
   separate stories or audiences unless the relationship between them is the
   central point. Aim to answer one main question per script.
+- For `Person profile introduction`, the first three seconds must contain a
+  verified retention hook: an origin-to-position contrast, a counterintuitive
+  fact, a high-stakes result, a signature contribution, or a concrete career
+  transformation. It must be supported by the resume or retrieved source.
 - The spoken script contains spoken words only. Put camera angles, actions,
   text overlays, props, B-roll, and scene notes in the storyboard.
 - Use natural Chinese that preserves the source tone. For news, legal, and
@@ -217,10 +227,9 @@ foundations, turning points, expertise and impact, and forward outlook. Do not
 reuse the celebrity explainer question-contrast-judgment structure unless the
 user explicitly requests that separate format.
 
-When the user explicitly requests English only for `Person profile
-introduction`, output the English hook and script without the Chinese
-translation. For every other mode, retain the normal bilingual contract unless
-the user explicitly overrides it.
+For `Person profile introduction`, always output the English profile script
+first and append a complete, natural Chinese translation below it. The Chinese
+translation is mandatory even when the user asks for an English script.
 
 Read `references/us-audience.md` only when audience psychology, cultural
 context, humor style, demographics, or calendar timing materially affects the
@@ -445,6 +454,10 @@ judgment / decision CTA]
 [Position / core thesis / foundations / turning points / expertise and impact /
 forward outlook]
 
+## Sources and Retrieval (person profile introduction when external sources are used)
+[Source URL / publisher / page title / publication or last-updated date /
+access date / facts used / verification limits]
+
 ## Storyboard
 [English storyboard table]
 
@@ -534,7 +547,8 @@ Read only the resources needed for the current mode:
 - `references/celebrity-explainer-series.md`: automatic routing, six-beat
   series structure, motive-safe phrasing, and subtype CTA patterns.
 - `references/person-profile-introduction.md`: automatic profile routing,
-  resume-to-story rules, timing, English-only output, and six-beat structure.
+  resume-to-story rules, URL retrieval, retrieval-safe sourcing, three-second
+  hooks, bilingual output, timing, and six-beat structure.
 - `references/viral-copy-review.md`: four-check diagnostic, S.T.O.R.M.
   rewriting structure, visual pacing guidance, and safe engagement triggers.
 - `references/production-and-publishing.md`: caption and discovery, sound-off
@@ -582,6 +596,11 @@ LinkedIn-style summary, company bio, or structured person facts and asks for an
 introduction, profile, biography explainer, or 60-80 second English script.
 Automatically use `Person profile introduction` instead of the celebrity
 explainer structure.
+
+Also use this skill when the user supplies a person-related URL, such as a
+Wikipedia page or official biography, and requests an introduction or profile
+script. Read the URL with the available web-reading skill before drafting,
+preserve the source facts, and provide the required Chinese translation.
 
 Also use this skill when the user asks for S.T.O.R.M. copy, a viral-style
 rewrite, stronger retention hooks, or diagnostic feedback on a TikTok script.

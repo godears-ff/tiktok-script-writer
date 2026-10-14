@@ -148,6 +148,13 @@ PROFILE_POSITIONING_STARTERS = [
     "What stands out in [person]'s path is [verified strength].",
     "[Person] brings [capability] to [field or mission]."
 ]
+PROFILE_HOOK_STARTERS = [
+    "From [unexpected origin] to [current position], [person] built [verified outcome].",
+    "Most people know [person] as [role]. The unexpected part is [verified fact].",
+    "[Person] turned [specific experience] into [documented result].",
+    "One [project / decision / result] changed how [person] approached [field].",
+    "[Person] is known for [signature contribution], but the career behind it started with [verified origin]."
+]
 CELEBRITY_NICHES = {"celebrity", "influencer", "entertainment"}
 PROFILE_ALIASES = {"profile", "bio", "resume", "cv"}
 PROFILE_NICHES = {"profile"}
@@ -188,7 +195,18 @@ def main():
             else "No automatic celebrity-series trigger detected."
         ),
         "target_duration_seconds": "60-80" if niche in PROFILE_NICHES else None,
-        "default_output_language": "English" if niche in PROFILE_NICHES else None,
+        "default_output_language": (
+            "English + Chinese" if niche in PROFILE_NICHES else None
+        ),
+        "profile_hook_starters": (
+            PROFILE_HOOK_STARTERS if niche in PROFILE_NICHES else None
+        ),
+        "source_retrieval": (
+            "Use the available Codex web-reading skill, preferably agent-reach, "
+            "before drafting from a URL."
+            if niche in PROFILE_NICHES
+            else None
+        ),
         "ideas": ideas,
         "comparison_questions": comparison_questions,
         "answer_axis_starters": (
@@ -207,7 +225,8 @@ def main():
         "p2_note": (
             "Person profile introductions use a distinct factual, "
             "career-arc structure and must not reuse the celebrity explainer "
-            "question-contrast-judgment format."
+            "question-contrast-judgment format. English and Chinese are both "
+            "required, and URLs must be read before drafting."
         )
     }
     print(json.dumps(output, indent=2))

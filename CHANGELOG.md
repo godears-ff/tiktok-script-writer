@@ -2,6 +2,29 @@
 
 All notable changes to this skill are documented here.
 
+## [1.8.0] - 2026-10-14
+
+### Added
+
+- Mandatory English-first plus complete Chinese translation output for
+  `Person profile introduction`.
+- URL-aware profile routing for Wikipedia pages, official biographies,
+  company profiles, interviews, and other person-related links.
+- Web-reading integration guidance using the available Codex retrieval skill,
+  preferably `agent-reach`, before drafting from a URL.
+- Verified three-second retention hooks based on transformation,
+  counterintuitive facts, high-stakes results, or signature contributions.
+- Source retrieval notes and bilingual fact-consistency checks.
+
+### Changed
+
+- Removed the profile-only English-only output exception. The Chinese
+  translation is now required.
+- Profile drafts must not be based on search snippets, page titles, or
+  unverified summaries.
+- Updated the profile card, script template, quality scorecards, topic
+  playbook, and idea generator.
+
 ## [1.7.0] - 2026-10-14
 
 ### Added

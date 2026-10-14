@@ -35,7 +35,7 @@ Use these six beats in order. The target is 60-80 seconds, usually about
 
 | Beat | 80s Guide | Purpose |
 |------|-----------|---------|
-| 1. Position | 0:00-0:05 | Lead with the person's role and strongest verified credential |
+| 1. Position | 0:00-0:05 | Lead with a verified three-second retention hook, then establish role and credibility |
 | 2. Core thesis | 0:05-0:12 | State the throughline that connects the career |
 | 3. Foundations | 0:12-0:25 | Cover origin, education, training, or early career |
 | 4. Turning points | 0:25-0:47 | Explain two or three career-defining milestones |
@@ -91,23 +91,72 @@ Do not add:
 Never reuse the celebrity mode's gossip framing, binary CTA, private-motive
 language, or "what is the real reason" hook for a resume-based introduction.
 
-## English-Only Output
+## URL and External Source Retrieval
 
-When the user explicitly requests an English script, output the English hook
-and spoken script only. Do not append the Chinese translation unless the user
-requests it.
+When the user supplies a URL, retrieve the page before drafting:
 
-When the user requests a full bilingual package, provide the normal complete
-Chinese translation after the English sections.
+1. Use the available Codex web-reading capability. Prefer the `agent-reach`
+   skill and its web-reading backend.
+2. For Wikipedia, official biographies, company profiles, interviews, or news
+   pages, read the page content rather than relying on the search-result
+   title or snippet.
+3. Prefer primary or official sources when available. Use Wikipedia as a
+   supplementary source and verify material dates, roles, and claims against
+   another source when the fact is contested or time-sensitive.
+4. If a page cannot be read, say so. Do not invent missing facts or present
+   an inaccessible page as if it had been reviewed.
+5. Record the source URL, publisher, page title, publication or last-updated
+   date when available, access date, facts used, and verification limits.
+
+Do not copy source sentences or the page's structure. Rewrite the facts into a
+spoken profile script and preserve uncertainty.
+
+## Three-Second Profile Hook
+
+The first three seconds must give the viewer a reason to stay. Choose one
+supported hook type:
+
+- Origin-to-position contrast
+- Counterintuitive fact
+- High-stakes result
+- Signature contribution
+- Concrete career transformation
+
+Examples:
+
+- "From a small-town classroom to [position], [person] built [verified result]."
+- "Most people know [person] as [role]. The unexpected part is [verified fact]."
+- "[Person] turned [specific experience] into [documented outcome]."
+- "One [project or decision] took [person] from [before] to [after]."
+
+The hook must be supported by the resume or retrieved source. Do not use
+unverified superlatives, private-life bait, gossip, or a fake controversy.
+
+The next sentence immediately explains the career thesis or promise, so the
+viewer knows what the profile will teach them.
+
+## Bilingual Output
+
+Always output the English profile hook and script first. Then append a
+complete, natural Chinese translation of the hook, script, source notes, and
+delivery guidance.
+
+The Chinese translation must preserve the same facts, dates, roles,
+achievements, uncertainty, and source limits. Do not strengthen claims in
+translation.
 
 ## Profile Quality Checks
 
 - The script sounds like a short documentary introduction, not a resume read
   aloud.
+- The first three seconds use a verified retention hook.
 - The first five seconds establish position and credibility.
 - One clear thesis connects the career.
 - Two or three turning points carry the middle.
 - Skills become capabilities and evidence.
 - The ending looks forward without inventing future plans.
 - Every material fact comes from the supplied profile or a verified source.
+- A supplied URL was read through the available web-reading skill and is
+  recorded in the source notes.
+- The English and Chinese versions preserve identical facts and positioning.
 - The direction remains visibly separate from the celebrity explainer series.

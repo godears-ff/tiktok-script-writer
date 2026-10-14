@@ -4,13 +4,15 @@
 Person Name:
 Source Type: resume / CV / bio / LinkedIn / speaker profile / company bio / other
 Primary Viewer:
-Output Language: English only / English + Chinese
+Output Language: English + Chinese
 Target Length: 60-80 seconds
 Target Word Count: 160-210
 
 Position:
 Strongest Verified Credential:
 Career Thesis:
+Three-Second Hook:
+Hook Type: origin-to-position / counterintuitive fact / high-stakes result / signature contribution / career transformation
 
 Foundations:
 Education or Training:
@@ -31,6 +33,10 @@ Current Mission:
 Future Contribution:
 
 Source Verification:
+Source URL:
+Publisher:
+Access Date:
+Retrieved Facts:
 Confirmed:
 Missing:
 Unverified or Omitted:

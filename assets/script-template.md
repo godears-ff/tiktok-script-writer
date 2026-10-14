@@ -20,7 +20,7 @@
 - **Series Mode**: [none / celebrity explainer series / person profile introduction]
 - **Subject Type**: [celebrity / influencer / entertainer / public figure / other]
 - **High-Risk Override**: [none / social news / commentary / user-requested]
-- **Output Language**: [English only when explicitly requested / English + Chinese]
+- **Output Language**: [English + Chinese; profile introductions always preserve the Chinese translation]
 
 ---
 
@@ -65,12 +65,19 @@ qualifier such as `reported`, `alleged`, `claimed`, or `unknown`.
 
 | Beat | Time | Purpose | Source Check |
 |------|------|---------|--------------|
-| 1. Position | 0:00-0:05 | Lead with the person's role and strongest verified credential | [resume / bio fact] |
+| 1. Position | 0:00-0:05 | Lead with a verified retention hook and the person's position | [resume / source URL fact] |
 | 2. Core thesis | 0:05-0:12 | Explain the throughline of the person's career | [synthesis from supplied facts] |
 | 3. Foundations | 0:12-0:25 | Cover origin, education, training, or early career | [dates and roles] |
 | 4. Turning points | 0:25-0:47 | Explain two or three career-defining milestones | [role + action + result] |
 | 5. Expertise and impact | 0:47-0:65 | Show capabilities, outcomes, projects, or recognition | [specific evidence] |
 | 6. Forward outlook | 0:65-0:80 | Close with current mission and future contribution | [no speculation] |
+
+Source Retrieval:
+- Source URL:
+- Publisher:
+- Retrieved Date:
+- Facts Used:
+- Verification Limits:
 
 ---
 

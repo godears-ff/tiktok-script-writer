@@ -60,11 +60,14 @@ playbook, then adjust without replacing the factual and safety rules.
 
 - Mode: automatically use `Person profile introduction` when the source is a
   resume, CV, bio, speaker profile, company bio, LinkedIn-style summary, or
-  structured set of career facts. Read `person-profile-introduction.md`.
+  structured set of career facts, or when the source is a person-related URL
+  that must be read through the available web-reading skill. Read
+  `person-profile-introduction.md`.
 - Viewer: people evaluating the person's credibility, career, expertise, or
   potential contribution
 - Tone: authoritative, warm, specific, and forward-looking
-- Hook: positioning plus the strongest verified achievement
+- Hook: a verified transformation, counterintuitive fact, result, or signature
+  contribution in the first three seconds
 - Structure: position -> core thesis -> foundations -> turning points ->
   expertise and impact -> forward outlook
 - Evidence: roles, dates, education, skills, projects, results, awards, and
@@ -73,7 +76,8 @@ playbook, then adjust without replacing the factual and safety rules.
 - Visuals: portrait, career timeline, role cards, project/result graphics
 - CTA: optional; prefer a forward-looking close over forced debate
 - Avoid: resume bullets with no narrative, invented motives, private-life
-  speculation, inflated praise, and celebrity-gossip framing
+  speculation, inflated praise, celebrity-gossip framing, and drafting from
+  an unverified search snippet
 
 ## Music / Hip-Hop News
 

@@ -5,7 +5,7 @@
 An agent skill for writing US-audience TikTok and short-form video scripts in
 English with a complete Chinese translation.
 
-Current release: **v1.7.0**
+Current release: **v1.8.0**
 
 ## Features
 
@@ -30,6 +30,10 @@ Current release: **v1.7.0**
 - A distinct six-beat profile structure focused on positioning, career
   throughline, foundations, turning points, expertise and impact, and future
   outlook.
+- Mandatory Chinese translation for every person profile introduction.
+- URL-aware profile research through available Codex web-reading skills,
+  including Wikipedia, official biographies, company profiles, and interviews.
+- Verified three-second retention hooks for profile introductions.
 - De-newsroom and de-Wikipedia rewriting for natural US TikTok voice.
 - Topic-specific tone calibration for news, entertainment, sports, technology,
   film, music, health, and minor-related content.

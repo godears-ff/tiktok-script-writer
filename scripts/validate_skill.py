@@ -36,7 +36,9 @@ P2_CONTRACT_STRINGS = (
     "## Six-Beat Profile Structure",
     "## Resume-to-Story Rules",
     "## Differentiation from Celebrity Explainer",
-    "## English-Only Output",
+    "## URL and External Source Retrieval",
+    "## Three-Second Profile Hook",
+    "## Bilingual Output",
 )
 
 
@@ -70,8 +72,8 @@ def validate_frontmatter(content: str, errors: list[str]) -> None:
         errors.append("SKILL.md description is missing.")
     elif len(description) > 1024:
         errors.append("SKILL.md description exceeds 1024 characters.")
-    if version != '"1.7.0"':
-        errors.append('SKILL.md metadata version must be "1.7.0".')
+    if version != '"1.8.0"':
+        errors.append('SKILL.md metadata version must be "1.8.0".')
 
 
 def validate_markdown(errors: list[str]) -> None:
@@ -155,6 +157,9 @@ def validate_python(errors: list[str]) -> None:
             "person-profile-introduction",
             "target_duration_seconds",
             "default_output_language",
+            "profile_hook_starters",
+            "source_retrieval",
+            "PROFILE_HOOK_STARTERS",
             "p2_note",
             "PROFILE_POSITIONING_STARTERS",
         ):

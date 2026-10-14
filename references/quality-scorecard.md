@@ -40,6 +40,8 @@ When the automatic celebrity mode applies, also verify:
 When the automatic person profile mode applies, verify:
 
 - The script is a coherent introduction, not a list of resume bullets.
+- The first three seconds use a verified retention hook and state why the
+  viewer should keep watching.
 - One clear career thesis connects the person's background, expertise, and
   current contribution.
 - The hook uses a verified role or achievement, not inflated praise.
@@ -49,6 +51,12 @@ When the automatic person profile mode applies, verify:
 - The ending looks forward and does not invent goals, motives, or private
   information.
 - The structure is visibly different from the celebrity explainer series.
+- A supplied URL was actually read through the available web-reading skill,
+  not inferred from a title or search snippet.
+- External-source facts include the source link, access date, and any
+  verification limit.
+- The English script and Chinese translation preserve identical facts,
+  positioning, dates, and qualifiers.
 
 ## Suggested Thresholds
 
